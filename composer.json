@@ -1,0 +1,53 @@
+{
+  "name": "ast/media-module",
+  "type": "laravel-module",
+  "description": "Media module for ast. Handles the media library.",
+  "keywords": [
+    "ast",
+    "media",
+    "files",
+    "library",
+    "thumbnails",
+    "filters"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Miya Yeh",
+      "email": "miya3344@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "miya3344@gmail.com",
+    "issues": "https://github.com/lilili001/Media/issues",
+    "source": "https://github.com/lilili001/Media"
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "composer/installers": "~1.0",
+    "intervention/image": "^2.3",
+    "guzzlehttp/psr7": "^1.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "3.5.*",
+    "league/flysystem-aws-s3-v3": "~1.0",
+    "mockery/mockery": "^0.9.5",
+    "friendsofphp/php-cs-fixer": "^1.11",
+    "doctrine/dbal": "^2.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Media\\": ".",
+      "Modules\\": "Modules/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
