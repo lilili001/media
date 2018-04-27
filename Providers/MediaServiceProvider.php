@@ -150,7 +150,7 @@ class MediaServiceProvider extends ServiceProvider
         $this->app[ThumbnailManager::class]->registerThumbnail('thumb90', [
             'resize' => [
                 'width' => 90,
-                'height' => auto,
+                'height' => null,
                 'callback' => function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -161,7 +161,7 @@ class MediaServiceProvider extends ServiceProvider
         $this->app[ThumbnailManager::class]->registerThumbnail('mediumThumb', [
             'resize' => [
                 'width' => 400,
-                'height' => auto,
+                'height' => null,
                 'callback' => function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -172,7 +172,7 @@ class MediaServiceProvider extends ServiceProvider
         $this->app[ThumbnailManager::class]->registerThumbnail('largeThumb', [
             'resize' => [
                 'width' => 600,
-                'height' => auto,
+                'height' => null,
                 'callback' => function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
@@ -183,7 +183,7 @@ class MediaServiceProvider extends ServiceProvider
         $this->app[ThumbnailManager::class]->registerThumbnail('xlargeThumb', [
             'resize' => [
                 'width' => 800,
-                'height' => auto,
+                'height' => null,
                 'callback' => function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
