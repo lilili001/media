@@ -146,10 +146,22 @@ class MediaServiceProvider extends ServiceProvider
                 },
             ],
         ]);
+        
+        $this->app[ThumbnailManager::class]->registerThumbnail('thumb90', [
+            'resize' => [
+                'width' => 90,
+                'height' => auto,
+                'callback' => function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                },
+            ],
+        ]);
+        
         $this->app[ThumbnailManager::class]->registerThumbnail('mediumThumb', [
             'resize' => [
                 'width' => 230,
-                'height' => 230,
+                'height' => auto,
                 'callback' => function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
