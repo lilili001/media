@@ -3,6 +3,7 @@
 namespace Modules\Media\Http\Controllers\Admin;
 
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Modules\Media\Entities\File;
 use Modules\Media\Image\ThumbnailManager;
 use Modules\Media\Repositories\FileRepository;
 
@@ -31,7 +32,8 @@ class MediaGridController extends AdminBaseController
      */
     public function index()
     {
-        $files = $this->file->allForGrid();
+        //$files = $this->file->allForGrid();
+        $files = File::orderBy('created_at','desc')->paginate(10);
         $thumbnails = $this->thumbnailsManager->all();
 
         return view('media::admin.grid.general', compact('files', 'thumbnails'));
